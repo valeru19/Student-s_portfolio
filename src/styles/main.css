@@ -91,6 +91,7 @@ body {
 }
 
 .title-1 {
+	margin-top: 30px;
 	margin-bottom: 60px;
 
 	font-size: 60px;
@@ -112,13 +113,14 @@ body {
 
 /* Projects  */
 
-/* .section-projects{
-	background-image: url(./../img/projects/projects-bg.avif);
-	background-repeat: no-repeat;
-	background-size: auto;
-	background-position: center center;
-	height: 100%;
-} */
+.section-projects{
+	/* background-image: url(./../img/projects/projects-bg.avif); */
+	/* background-repeat: no-repeat; */
+	/* background-size: auto; */
+	/* background-position: center center; */
+	/* height: 100%; */
+	margin-top: 30px;
+}
 
 .projects {
 	display: flex;
