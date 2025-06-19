@@ -112,12 +112,13 @@ body {
 
 /* Projects  */
 
-.section-projects{
+/* .section-projects{
 	background-image: url(./../img/projects/projects-bg.avif);
 	background-repeat: no-repeat;
 	background-size: auto;
 	background-position: center center;
-}
+	height: 100%;
+} */
 
 .projects {
 	display: flex;
