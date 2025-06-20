@@ -3,17 +3,16 @@
 
 :root {
 	/* Colors */
-	--blackpure: #000;
-	--black: #171718;
-	--black-border: #26292d;
-	--white: #fff;
-	--purple: #860df8;
-	--grey: #ccc3c3;
-	--cream: #eed878;
-	--green: #8ae778a2;
-	--yelow: #fffb00;
-	--blue: #1523f3; 
-
+	--black-pure: #000000; /* Оставляем чистый черный для специфических случаев */
+	--black: #1a1a1a; /* Мягкий черный для темного режима */
+	--black-border: #333333; /* Темно-серый для границ */
+	--white: #ffffff; /* Чистый белый */
+	--grey: #6b7280; /* Нейтральный серый для текста и элементов */
+	--cream: #f5e8c7; /* Более мягкий кремовый для теплых акцентов */
+	--purple: #7c3aed; /* Мягкий фиолетовый, менее агрессивный, но яркий */
+	--green: #34d399; /* Яркий, но не кричащий зеленый, без прозрачности */
+	--yellow: #facc15; /* Мягкий желтый, более приятный для глаз */
+	--blue: #3b82f6; /* Спокойный синий, современный и универсальный */
 
 	/* Nav */
 	--nav-bg: var(--black);
@@ -29,26 +28,28 @@
 	--footer-text: var(--white);
 
 	/* Light mode */
-	--page-bg: var(--green);
+	--page-bg: #f3f4f6; /* Светло-серый фон для светлого режима */
+	--container: #f5e8c7;
 	--text-color: var(--black);
-	--accent: var(--purple);
-	--title-1: var(--yelow);
-	--title-2:var(--blue);
+	--accent: var(--purple); /* Основной акцентный цвет */
+	--title-1: var(--yellow); /* Для заголовков первого уровня */
+	--title-2: var(--blue); /* Для заголовков второго уровня */
 	--project-card-bg: var(--white);
 	--project-card-text: var(--black);
-	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.15); /* Мягкая тень для светлого режима */
 }
 
+/* Dark mode */
 .dark {
-	/* Dark mode */
-	--page-bg: #252526;
-	--text-color: var(--white);
-
-	--title-1: var(--grey);
-	--title-2: var(--white);
-	--project-card-bg: var(--black);
+	--page-bg: #1f2937; /* Темно-серый фон для темного режима */
+	--text-color: #e5e7eb; /* Светло-серый для текста, чтобы избежать резкого белого */
+	--accent: var(--purple);
+	--container: #6b7280;
+	--title-1: var(--yellow);
+	--title-2: var(--blue);
+	--project-card-bg: #2d3748; /* Темно-серый для карточек */
 	--project-card-text: var(--white);
-	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
+	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.5); /* Более глубокая тень */
 }
 
 html,

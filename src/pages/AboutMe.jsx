@@ -1,16 +1,13 @@
-// Импортируем компоненты и стили
-//найти картинки, добавить css все на гроке 
-
 import { motion } from 'framer-motion';
 import './../styles/main.css';
-import about1 from './../img/about/images.jpg'; // Замените на свои изображения
+import about1 from './../img/about/images.jpg';
 import about2 from './../img/about/java.png';
 import about3 from './../img/about/react.svg';
 
 // Компонент для страницы "About me"
 const About = () => {
     return (
-        <main className="section about-page" style={{ background: '#1a1a1a', color: '#fff', padding: '50px 0' }}>
+        <main className="section about-page" style={{ background: '--bg-color', color: '--text-color', padding: '50px 0' }}>
             <div className="container">
                 {/* Контейнер 1: Появление с масштабированием */}
                 <motion.div
@@ -18,12 +15,12 @@ const About = () => {
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.7, ease: 'easeOut' }}
-                    style={{ marginBottom: '50px', textAlign: 'center' }}
+                    transition={{ duration: 1, ease: 'easeInOut' }}
+                    style={{ marginBottom: '50px', textAlign: 'center', backgroundColor: '#6b7280' }}
                 >
                     <img src={about1} alt="About Me 1" style={{ width: '300px', height: '300px', objectFit: 'cover', borderRadius: '10px' }} />
                     <h2 className="title-1">Who Am I?</h2>
-                    <p style={{ maxWidth: '600px', margin: '20px auto' }}>
+                    <p style={{ maxWidth: '600px', margin: '20px auto', fontSize: 25 }}>
                         I am a passionate frontend developer with a love for creating beautiful and functional web experiences. My journey started with HTML and CSS, and now I explore React, animations, and more!
                     </p>
                 </motion.div>
@@ -31,15 +28,17 @@ const About = () => {
                 {/* Контейнер 2: Сдвиг сверху с вращением */}
                 <motion.div
                     className="about-container"
-                    initial={{ opacity: 0, y: -100, rotate: -10 }}
+                    initial={{ opacity: 0, y: -200, rotate: -10 }}
                     whileInView={{ opacity: 1, y: 0, rotate: 0 }}
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.9, ease: 'easeOut' }}
-                    style={{ marginBottom: '50px', textAlign: 'center' }}
+                    style={{ marginBottom: '50px', textAlign: 'center' , backgroundColor: '#6b7280'}}
                 >
-                    <img src={about2} alt="About Me 2" style={{ width: '300px', height: '600px', objectFit: 'cover', borderRadius: '10px' }} />
+                    <img src={about2} alt="About Me 2" 
+                        style={{ width: '300px', height: '600px', objectFit: 'cover', borderRadius: '10px' }} 
+                    />
                     <h2 className="title-1">My Skills</h2>
-                    <p style={{ maxWidth: '600px', margin: '20px auto' }}>
+                    <p style={{ maxWidth: '600px', margin: '20px auto', fontSize: 25 }}>
                         I specialize in JavaScript, React, and modern CSS frameworks like TailwindCSS. I also have experience with backend technologies like Node.js and databases.
                     </p>
                 </motion.div>
@@ -51,11 +50,19 @@ const About = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.8, ease: 'easeInOut' }}
-                    style={{ textAlign: 'center' }}
+                    style={{ textAlign: 'center' , backgroundColor: '#6b7280'}}
                     >
-                    <img src={about3} alt="About Me 3" style={{ width: '450px', height: '400px', objectFit: 'cover', borderRadius: '10px' }} />
+                    <motion.img src={about3} alt="About Me 3" 
+                        style={{ width: '450px', height: '400px', objectFit: 'cover', borderRadius: '10px' }}
+                        animate={{ rotate: 360 }} // вращение 360
+                        transition={{
+                            repeat: Infinity,
+                            duration: 2, // длительность вращения
+                            ease: 'linear',
+                        }}
+                    />
                     <h2 className="title-1">My Journey</h2>
-                    <p style={{ maxWidth: '600px', margin: '20px auto' }}>
+                    <p style={{ maxWidth: '600px', margin: '20px auto', fontSize: 25 }}>
                         From learning basics to building complex projects, my journey has been filled with challenges and growth. I’m excited to continue learning and collaborating!
                     </p>
                 </motion.div>
