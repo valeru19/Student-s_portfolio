@@ -211,9 +211,38 @@ body {
 	
 	background-repeat: no-repeat;
 	background-position: center center;
-	
-
 }
+
+/* Стили для страницы About */
+.about-page {
+	min-height: 100vh; /* Минимальная высота страницы */
+	padding: 50px 0;
+}
+
+.about-container {
+	background: var(--page-bg); /* Легкий фон для контраста */
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 0 4px 15px rgba(230, 223, 223, 0.3); /* Тень для глубины */
+	margin-bottom: 50px;
+}
+
+.about-container img {
+	margin-bottom: 20px;
+	transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+.about-container:hover img {
+  transform: scale(1.05); /* Увеличение изображения при наведении */
+}
+
+/* Оптимизация анимаций для плавности */
+.fade-in-scroll,
+.slide-in-text,
+.about-container {
+	will-change: opacity, transform;
+}
+
 
 @media (max-width: 620px) {
 	/* Header  */
@@ -298,45 +327,7 @@ body {
 	.social__item {
 		width: 28px;
 	}
-}
-
-
-@import './reset.css';
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
-
-/* Стили для страницы About */
-.about-page {
-	min-height: 100vh; /* Минимальная высота страницы */
-	padding: 50px 0;
-}
-
-.about-container {
-	background: rgba(255, 255, 255, 0.1); /* Легкий фон для контраста */
-	padding: 30px;
-	border-radius: 15px;
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Тень для глубины */
-	margin-bottom: 50px;
-}
-
-.about-container img {
-	margin-bottom: 20px;
-	transition: transform 0.3s ease; /* Анимация при наведении */
-}
-
-.about-container:hover img {
-  transform: scale(1.05); /* Увеличение изображения при наведении */
-}
-
-/* Оптимизация анимаций для плавности */
-.fade-in-scroll,
-.slide-in-text,
-.about-container {
-	will-change: opacity, transform;
-}
-
-/* Адаптивность анимаций */
-@media (max-width: 620px) {
-	.about-container {
+		.about-container {
 		padding: 20px;
 	}
 	.about-container img {
@@ -344,3 +335,4 @@ body {
 		height: auto;
 	}
 }
+
