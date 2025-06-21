@@ -13,7 +13,7 @@ const containerVariants = {
         transition: { duration: 0.5, ease: 'easeInOut' },
     },
     expanded: {
-        height: 'auto',
+        height: '100%',
         width: '100%',
         transition: { duration: 0.5, ease: 'easeInOut' },
     },
@@ -113,6 +113,7 @@ const About = () => {
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
+                        
                         maxWidth: '1200px',
                         marginLeft: 'auto',
                         marginRight: 'auto',
@@ -149,7 +150,7 @@ const About = () => {
                                 style={{
                                     maxWidth: '600px',
                                     margin: '20px auto',
-                                    fontSize: '29px',
+                                    fontSize: '22px',
                                 }}
                                 variants={textVariants}
                                 initial="hidden"
@@ -219,7 +220,7 @@ const About = () => {
                                 style={{
                                     maxWidth: '600px',
                                     margin: '20px auto',
-                                    fontSize: '29px',
+                                    fontSize: '22px',
                                 }}
                                 variants={textVariants}
                                 initial="hidden"
@@ -288,7 +289,7 @@ const About = () => {
                                 style={{
                                     maxWidth: '600px',
                                     margin: '20px auto',
-                                    fontSize: '29px',
+                                    fontSize: '22px',
                                 }}
                                 variants={textVariants}
                                 initial="hidden"

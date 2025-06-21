@@ -41,6 +41,19 @@
 	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.15); /* Мягкая тень для светлого режима */
 }
 
+/* Стили для блесток */
+.sparkle {
+  will-change: transform, opacity; /* Оптимизация производительности */
+}
+
+/* Убедитесь, что навбар и футер имеют z-index выше 1000 */
+.navbar {
+  z-index: 2000;
+}
+
+.footer {
+  z-index: 2000;
+}
 /* Dark mode */
 .dark {
 	--page-bg: #1f2937; /* Темно-серый фон для темного режима */
@@ -52,6 +65,10 @@
 	--project-card-bg: #2d3748; /* Темно-серый для карточек */
 	--project-card-text: var(--white);
 	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.5); /* Более глубокая тень */
+}
+
+.sparkle {
+  will-change: transform, opacity; /* Оптимизация производительности */
 }
 
 html,
