@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import './../../styles/main.css';
+import './../footer/style.css';
 
 // Варианты анимации для блесток
 const sparkleVariants = {
@@ -10,11 +11,11 @@ const sparkleVariants = {
         y: custom.startY, // Начало под навбаром
     }),
     animate: (custom) => ({
-        opacity: 1,
+        opacity: 0,
         y: '500vw', // Падение до футера
         transition: {
-        duration: 8, // Случайная длительность
-        ease: 'linear',
+            duration: 10, // Случайная длительность
+            ease: 'linear',
         },
     }),
 };
@@ -29,23 +30,23 @@ const sparkleColors = [
 ];
 
 // Компонент для генерации падающих блесток
-const Sparkles = ({ navbarHeight = 64, maxCount = 30, intervalDelay = 100 }) => {
+const Sparkles = ({ navbarHeight = 100, maxCount = 50, intervalDelay = 50 }) => {
     const [sparkles, setSparkles] = useState([]);
 
     // Генерация одной блестки
     const generateSparkle = () => {
-        const footer = document.querySelector('.footer'); // Предполагается класс .footer
+        const footer = document.querySelector('.footer');
         const endY = footer
         ? footer.getBoundingClientRect().top - navbarHeight
         : window.innerHeight - navbarHeight; // Запасной вариант
         return {
-        id: Math.random(),
-        x: Math.random() * window.innerWidth, // Случайная позиция по X
-        startY: 0, // Начало сразу под навбаром (относительно контейнера)
-        endY: endY, // Падение до футера
-        duration: 5 + Math.random() * 5, // Длительность от 5 до 10 секунд
-        size: 10 + Math.random() * 10, // Размер от 10 до 20px
-        color: sparkleColors[Math.floor(Math.random() * sparkleColors.length)], // Случайный цвет
+            id: Math.random(),
+            x: Math.random() * window.innerWidth, // Случайная позиция по X
+            startY: 0, // Начало сразу под навбаром (относительно контейнера)
+            endY: endY, // Падение до футера
+            duration: 10 + Math.random() * 10, // Длительность от 5 до 10 секунд
+            size: 10 + Math.random() * 10, // Размер от 10 до 20px
+            color: sparkleColors[Math.floor(Math.random() * sparkleColors.length)], // Случайный цвет
         };
     };
 
@@ -66,20 +67,20 @@ const Sparkles = ({ navbarHeight = 64, maxCount = 30, intervalDelay = 100 }) => 
 
         // Удаление блесток после завершения анимации
         const cleanupInterval = setInterval(() => {
-        setSparkles((prev) => prev.filter((sparkle) => {
-            const elapsed = (Date.now() - sparkle.id * 1000) / 1000; // Примерное время
-            return elapsed < sparkle.duration; // Удаляем завершенные
-        }));
+            setSparkles((prev) => prev.filter((sparkle) => {
+                const elapsed = (Date.now() - sparkle.id * 1000) / 1000; // Примерное время
+                return elapsed < sparkle.duration; // Удаляем завершенные
+            }));
         }, 500);
 
         // Обновление позиций при ресайзе или скролле
         const handleUpdate = () => {
-        setSparkles((prev) => prev.map((sparkle) => ({
-            ...sparkle,
-            x: Math.random() * window.innerWidth,
-            endY: document.querySelector('.footer')
-            ? document.querySelector('.footer').getBoundingClientRect().top - navbarHeight
-            : window.innerHeight - navbarHeight,
+            setSparkles((prev) => prev.map((sparkle) => ({
+                ...sparkle,
+                x: Math.random() * window.innerWidth,
+                endY: document.querySelector('.footer')
+                ? document.querySelector('.footer').getBoundingClientRect().top - navbarHeight
+                : window.innerHeight - navbarHeight,
         })));
         };
         window.addEventListener('resize', handleUpdate);
