@@ -52,8 +52,6 @@ const Navbar = () => {
                             </NavLink>
                         </li>
                     </ul>
-
-
                 </div>
             </div>
         </nav>

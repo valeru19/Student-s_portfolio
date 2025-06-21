@@ -1,9 +1,12 @@
 import FadeInOnScroll from '../components/dynamic/FadeInOnScroll';
+import { motion } from 'framer-motion';
 import './../styles/main.css';
 
 const Contacts = () => {
     return (  
-        <main className="section-contacts">
+        <motion.main className="section-contacts"
+
+        >
             <div className="section">
                 <div className="container">
                     <FadeInOnScroll className="title-1">
@@ -16,16 +19,16 @@ const Contacts = () => {
                         </FadeInOnScroll>
                         <FadeInOnScroll className="content-list__item">
                             <h2 className="title-2">Telegram / WhatsApp</h2>
-                            <p><a href="tel:+79051234567">+7 (905) 123-45-67</a></p>
+                            <p><a href="tel:+79051234567"><strong>+7 (905) 123-45-67</strong></a></p>
                         </FadeInOnScroll>
                         <FadeInOnScroll className="content-list__item">
                             <h2 className="title-2">Email</h2>
-                            <p><a href="mailto:webdev@protonmail.com">webdev@protonmail.com</a></p>
+                            <p><a href="mailto:webdev@protonmail.com"><strong>webdev@protonmail.com</strong></a></p>
                         </FadeInOnScroll>
                     </ul>
                 </div>
             </div>
-        </main>
+        </motion.main>
     );
 }
 
