@@ -3,16 +3,16 @@
 
 :root {
 	/* Colors */
-	--black-pure: #000000; /* Оставляем чистый черный для специфических случаев */
-	--black: #1a1a1a; /* Мягкий черный для темного режима */
-	--black-border: #333333; /* Темно-серый для границ */
-	--white: #ffffff; /* Чистый белый */
-	--grey: #6b7280; /* Нейтральный серый для текста и элементов */
-	--cream: #f5e8c7; /* Более мягкий кремовый для теплых акцентов */
-	--purple: #6616f1; /* Мягкий фиолетовый, менее агрессивный, но яркий */
-	--green: #1ed894; /* Яркий, но не кричащий зеленый, без прозрачности */
-	--yellow: #facc15; /* Мягкий желтый, более приятный для глаз */
-	--blue: #4e3bf6; /* Спокойный синий, современный и универсальный */
+	--black-pure: #000000;
+	--black: #1a1a1a; 
+	--black-border: #333333; 
+	--white: #ffffff; 
+	--grey: #6b7280; 
+	--cream: #f5e8c7;
+	--purple: #29f500;
+	--green: #1ed894;
+	--yellow: #facc15;
+	--blue: #3822ff; 
 	--red: #f86c6c;
 	--rpr: #1ac9c9;
 
@@ -34,7 +34,7 @@
 	--container: #f5e8c7;
 	--text-color: var(--black);
 	--accent: var(--purple); /* Основной акцентный цвет */
-	--title-1: var(--purple); /* Для заголовков первого уровня */
+	--title-1: var(--yellow); /* Для заголовков первого уровня */
 	--title-2: var(--blue); /* Для заголовков второго уровня */
 	--project-card-bg: var(--white);
 	--project-card-text: var(--black);
@@ -98,8 +98,8 @@ body {
 
 .container {
 	margin: 0 auto;
-	padding: 0 15px;
-	max-width: 1200px;
+	padding: 0 15vh;
+	max-width: 1200vh;
 }
 
 .none {
